@@ -2,20 +2,42 @@
   "name": "webrtc",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsc -b && node dist/index.js"
+    "dev": "tsc -b && node dist/server.js",
+    "start": "nodemon src/server.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "@types/ws": "^8.18.1",
+    "@prisma/client": "^6.9.0",
+    "@types/cors": "^2.8.18",
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^5.0.2",
+    "@types/pg": "^8.15.4",
     "@types/redis": "^4.0.11",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
     "express": "^5.1.0",
-    "ws": "^8.18.2",
-    "redis": "^4.6.13"
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.16.0",
+    "prisma": "^6.9.0",
+    "redis": "^4.6.13",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.24",
+    "ws": "^8.18.2"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^22.15.30",
+    "@types/ws": "^8.18.1",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   }
 }
