@@ -4,6 +4,7 @@ import express from "express";
 import cors from "cors";
 import authRoutes from "./routes/auth";
 import jwt from "jsonwebtoken";
+const app= express();
 app.use(cors());
 const JWT_SECRET : string | undefined = process.env.JWT_SECRET;
 if(!JWT_SECRET){
@@ -12,7 +13,7 @@ if(!JWT_SECRET){
 const wss = new WebSocketServer({port: 9090});
 dotenv.config();
 let usercount=0;
-const app= express();
+
 app.use(express.json());
 
 
