@@ -4,7 +4,7 @@ import express from "express";
 import cors from "cors";
 import authRoutes from "./routes/auth";
 import jwt from "jsonwebtoken";
-
+app.use(cors());
 const JWT_SECRET : string | undefined = process.env.JWT_SECRET;
 if(!JWT_SECRET){
   throw new Error("JWT_SECRET must be defined in environment variables");
@@ -14,7 +14,7 @@ dotenv.config();
 let usercount=0;
 const app= express();
 app.use(express.json());
-app.use(cors());
+
 
 app.use("/api/auth",authRoutes);  
 
